@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-feature-settings: 'cv11', 'ss01';
+}
+
+::selection {
+  background-color: rgba(212, 175, 55, 0.35);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.35);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 175, 55, 0.6);
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/60 dark:bg-onyx-900/50 backdrop-blur-xl border border-white/20 dark:border-white/10;
+  }
+
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-gold-500 px-6 py-3 text-sm font-medium tracking-wide text-onyx-950 transition-all duration-300 hover:bg-gold-400 hover:shadow-gold-glow active:scale-95 disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-onyx-300 dark:border-onyx-700 px-6 py-3 text-sm font-medium tracking-wide text-onyx-900 dark:text-onyx-50 transition-all duration-300 hover:border-gold-500 hover:text-gold-600 dark:hover:text-gold-400 active:scale-95;
+  }
+
+  .input-field {
+    @apply w-full rounded-xl border border-onyx-200 dark:border-onyx-800 bg-white/70 dark:bg-onyx-900/60 px-4 py-3 text-sm text-onyx-900 dark:text-onyx-50 placeholder-onyx-400 outline-none transition-all focus:border-gold-500 focus:ring-2 focus:ring-gold-500/20;
+  }
+
+  .section-eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.25em] text-gold-600 dark:text-gold-400;
+  }
+
+  .page-title {
+    @apply font-serif text-4xl md:text-5xl font-semibold tracking-tight text-onyx-950 dark:text-onyx-50;
+  }
+
+  .skeleton {
+    @apply animate-pulse bg-onyx-200/70 dark:bg-onyx-800/70 rounded-xl;
+  }
+}
+
+/* Leaflet dark tiles container fix */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  z-index: 0;
+}
