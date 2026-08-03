@@ -39,8 +39,8 @@ data (artworks, accounts, favorites, upload history) is stored in the browser's
 
 | Role | Email | Password |
 |---|---|---|
-| Admin | `nv3600714@gmail.com` | `Nitesh143` |
-| Customer | `user@eranostalgia.com` | `password123` |
+| Admin | `xxxxxxxxxx` | `xxxxx` |
+| Customer | `user@eranostalgia.com` | `xxxxx` |
 
 > These are development-only sandbox credentials with no real backend behind them.
 
